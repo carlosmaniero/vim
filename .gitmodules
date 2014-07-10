@@ -22,3 +22,6 @@
 [submodule "bundle/conque"]
 	path = bundle/conque
 	url = https://github.com/oplatek/Conque-Shell.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
