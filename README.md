@@ -20,11 +20,11 @@ To load this file use the "source" command
 
 | Command   | Description                       |
 |-----------|-----------------------------------|
-| <C-v>     | Enter in visual mode (selction)   |
-| <C-y>     | Copy selected content             |
+| < C-v >   | Enter in visual mode (selction)   |
+| < C-y >   | Copy selected content             |
 | p         | Paste                             |
 | x         | Cut selected content              |
-| <C-R> *   | Past from clipboard               |
+| < C-R > * | Past from clipboard               |
 | d         | Delete selected content           |
 | dd        | Delete line                       |
 | >         | Indent selected content           |
@@ -37,27 +37,27 @@ That will enable CSS auto-completion in Vim. To use it, press Ctrl + x followed 
 
 ## Zen Coding
 
-Start typing and press <C-y> ,
+Start typing and press < C-y > ,
 
 ## Python
 
-| Command   | Description               |
-|-----------|---------------------------|
-| \d        | Go to definition          |
-| \g        | Goto assignments          |
-| <C-Space> | AutoComplete              |
-| K         | Show documentation        |
-| \r        | Rename                    |
-| \n        | Show all usages           |
+| Command       | Description               |
+|---------------|---------------------------|
+| \d            | Go to definition          |
+| \g            | Goto assignments          |
+| < C-Space >   | AutoComplete              |
+| K             | Show documentation        |
+| \r            | Rename                    |
+| \n            | Show all usages           |
 
 ## Git (fugitive)
 
 | Command           | Description                       |
 |-------------------|-----------------------------------|
-| :Git add <file>   | Add a file                        |
+| :Git add < file > | Add a file                        |
 | :Git add %        | Add current file                  |
 | :GCommit          | Commit                            |
-| :Git <command>    | Run a git command                 |
+| :Git < command >  | Run a git command                 |
 
 ### Conflicts
 
@@ -65,7 +65,7 @@ To resolve commit see this [tutorial](http://vimcasts.org/episodes/fugitive-vim-
 
 ## NERDTree (files navigation)
 
-<C-n> To open and close NERDTree
+< C-n > To open and close NERDTree
 
 ## Conque (Shell)
 
