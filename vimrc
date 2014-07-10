@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set number
 set nowrap
 set guioptions-=m  "remove menu bar
