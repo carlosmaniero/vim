@@ -3,6 +3,11 @@ First create a link for vimrc
 
 	ln -s ~/.vim/vimrc ~/.vimrc
 
+## Requirements
+
+    # pip install flake8
+    # sudo apt-get install vim-gtk
+
 # VirtualEnv
 For set virtual env you can create a .vim with the project config, eg.:
 	
