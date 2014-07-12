@@ -8,6 +8,20 @@ First create a link for vimrc
     # pip install flake8
     # sudo apt-get install vim-gtk
 
+# Fonts
+To use vim-airline you can download the powerlines-fonts from github and put in your ~/.fonts. 
+
+**If you no have ~/.fonts path**
+
+    git clone https://github.com/Lokaltog/powerline-fonts ~/.fonts
+
+After putting the fonts in ~/.fonts you need clean the font cache.
+    
+    fc-cache -vf ~/.fonts
+
+If you want use vim in terminal you must configure manually the font in your terminal preference.
+By default I use Meslo LG S Regular for Powerline.
+
 # VirtualEnv
 For set virtual env you can create a .vim with the project config, eg.:
 	
@@ -71,10 +85,11 @@ To resolve commit see this [tutorial](http://vimcasts.org/episodes/fugitive-vim-
 
 ## NERDTree (files navigation)
 
-< C-n > To open and close NERDTree
+< C-t > To open and close NERDTree
 
 ## Conque (Shell)
 
 :ConqueTerm or :ConqueTermSplit with param bash, eg.:
 
     :ConqueTermSplit bash
+

@@ -13,15 +13,20 @@ set expandtab
 set smartindent
 set mouse=a
 
-set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
+" set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+" set guigont=Droid\ Sans\ Mono\ for\ Powerline\ 11
+set guifont=Meslo\ LG\ S\ for\ Powerline
 set t_Co=256
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 
-colorscheme hybrid
+" colorscheme hybrid
+colorscheme badwolf
 
 "NERDTree"
 let g:NERDTreeWinPos = "right"
-map <C-n> :NERDTreeToggle<CR>
+map <C-t> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
 
 "Git Gutter"
 let g:gitgutter_eager = 1
@@ -33,3 +38,4 @@ let g:flake8_max_line_length=119
 
 "CSS"
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
