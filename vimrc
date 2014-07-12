@@ -11,6 +11,11 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set smartindent
+set mouse=a
+
+set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
+set t_Co=256
+let g:airline_powerline_fonts = 1
 
 colorscheme hybrid
 
