@@ -1,6 +1,7 @@
 # Basic config
-First create a link for vimrc
+First download and create a link for vimrc
 
+    git clone --recursive https://github.com/carlosmaniero/vim.git .vim
 	ln -s ~/.vim/vimrc ~/.vimrc
 
 ## Requirements
