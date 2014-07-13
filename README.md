@@ -7,7 +7,6 @@ First download and create a link for vimrc
 ## Requirements
 
     $ sudo pip install flake8
-    $ sudo apt-get install vim-gtk
 
 # Fonts
 To use vim-airline you can download the powerlines-fonts from github and put in your ~/.fonts. 
