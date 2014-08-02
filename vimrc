@@ -21,7 +21,7 @@ set t_Co=256
 let g:airline_powerline_fonts=1
 
 " colorscheme hybrid
-colorscheme badwolf
+colorscheme harlequin 
 
 "NERDTree"
 let g:NERDTreeWinPos = "right"
@@ -33,9 +33,26 @@ let g:gitgutter_eager = 1
 let g:gitgutter_realtime = 1
 let g:gitgutter_updatetime = 250
 
+"Python Syntax"
+autocmd FileType python
+    \ let python_highlight_all = 1 |
+    \ :Python2Syntax
+
 "Flake8"
 let g:flake8_max_line_length=119
 
-"CSS"
+"Completation"
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
+"HTML"
+autocmd BufNewFile,BufRead *.html set filetype=htmldjango
+
+"Paste"
+
+function DoPaste()
+    set 
+endfunction
+
+map <C-v> call DoPaste()
