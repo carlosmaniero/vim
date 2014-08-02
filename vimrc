@@ -48,11 +48,3 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 "HTML"
 autocmd BufNewFile,BufRead *.html set filetype=htmldjango
-
-"Paste"
-
-function DoPaste()
-    set 
-endfunction
-
-map <C-v> call DoPaste()
