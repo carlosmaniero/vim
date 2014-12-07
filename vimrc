@@ -46,5 +46,8 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
+"TagBar"
+map <F8> :TagbarToggle<CR><CR>
+
 "HTML"
 autocmd BufNewFile,BufRead *.html set filetype=htmldjango
