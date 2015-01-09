@@ -19,6 +19,7 @@ set mouse=a
 set guifont=Meslo\ LG\ S\ for\ Powerline
 set t_Co=256
 let g:airline_powerline_fonts=1
+syntax enable
 
 " colorscheme hybrid
 colorscheme harlequin 
