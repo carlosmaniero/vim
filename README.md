@@ -38,18 +38,19 @@ To load this file use the "source" command
 
 ## Vim
 
-| Command   | Description                       |
-|-----------|-----------------------------------|
-| < C-v >   | Enter in visual mode (selction)   |
-| < C-y >   | Copy selected content             |
-| p         | Paste                             |
-| x         | Cut selected content              |
-| < C-R > * | Past from clipboard               |
-| d         | Delete selected content           |
-| dd        | Delete line                       |
-| >         | Indent selected content           |
-| <         | De-indent selected content        | 
-
+| Command           | Description                       |
+|-------------------|-----------------------------------|
+| < C-v >           | Enter in visual mode (selction)   |
+| < C-y >           | Copy selected content             |
+| p                 | Paste                             |
+| x                 | Cut selected content              |
+| < C-R > *         | Past from clipboard               |
+| d                 | Delete selected content           |
+| dd                | Delete line                       |
+| >                 | Indent selected content           |
+| <                 | De-indent selected content        | 
+| < C-Left >        | Previous Tab                      |
+| < C-Right >       | Next tab                          |
 
 ## Autocomplete CSS
 
