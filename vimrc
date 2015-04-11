@@ -63,9 +63,9 @@ map <C-Left> :tabprevious<CR>
 "Git commands"
 map <F3> :Git add .<CR><CR>
 map <F4> :Git add %<CR><CR>
-map <F5> :Gpull<CR><CR>
-map <F6> :Gcommit<CR><CR>
-map <F7> :Gpush<CR><CR>
+map <F5> :Gpull<CR>
+map <F6> :Gcommit<CR>i
+map <F7> :Gpush<CR>
 
 
 "HTML"
