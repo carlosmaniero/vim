@@ -52,6 +52,7 @@ To load this file use the "source" command
 | < C-Left >        | Previous Tab                      |
 | < C-Right >       | Next tab                          |
 
+
 ## Autocomplete CSS
 
 That will enable CSS auto-completion in Vim. To use it, press Ctrl + x followed by Ctrl + o while partially typing CSS codes.
@@ -79,6 +80,11 @@ Start typing and press < C-y > ,
 | :Git add %        | Add current file                  |
 | :GCommit          | Commit                            |
 | :Git < command >  | Run a git command                 |
+| < F3 >            | Add all files in Git              |
+| < F4 >            | Add current file in Git           |
+| < F5 >            | git pull                          |
+| < F6 >            | git commit                        |
+| < F7 >            | git push                          |
 
 ### Conflicts
 
