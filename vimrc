@@ -57,8 +57,8 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 map <F8> :TagbarToggle<CR><CR>
 
 "Alternate tab"
-map <C-Right> :tabnext<CR><CR>
-map <C-Left> :tabprevious<CR><CR>
+map <C-Right> :tabnext<CR>
+map <C-Left> :tabprevious<CR>
 
 "Git commands"
 map <F3> :Git add .<CR><CR>
