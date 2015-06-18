@@ -21,7 +21,8 @@ set t_Co=256
 let g:airline_powerline_fonts=1
 syntax enable
 
-colorscheme hybrid
+" colorscheme hybrid
+colorscheme evening
 " colorscheme harlequin 
 " colorscheme badwolf
 " colorscheme ingretu
@@ -57,10 +58,13 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 map <F8> :TagbarToggle<CR><CR>
 
 "Alternate tab"
-map <C-Right> :tabnext<CR>
-map <C-Left> :tabprevious<CR>
+map! <C-Down> <ESC>:tabnext<CR>i
+map! <C-Up> <ESC>:tabprevious<CR>i
+map <C-Down> <ESC>:tabnext<CR>
+map <C-Up> <ESC>:tabprevious<CR>
 
 "Git commands"
+map <F2> :Gstatus<CR>
 map <F3> :Git add .<CR><CR>
 map <F4> :Git add %<CR><CR>
 map <F5> :Gpull<CR>
@@ -84,9 +88,38 @@ hi Directory ctermbg=None
 hi Question ctermbg=None
 hi MoreMsg ctermbg=None
 hi String ctermbg=None
+"Colors
 hi LineNr ctermfg=7
 hi CursorLineNr ctermfg=15
+hi CursorLine ctermbg=4 ctermfg=None cterm=None
+hi TabLine ctermbg=None cterm=None
+hi TabLineFill ctermbg=None cterm=None
+hi TabLineSel ctermbg=7 ctermfg=232 cterm=None
+hi VertSplit cterm=None ctermfg=232
+hi String ctermfg=38
+hi Statement ctermfg=202
+hi Constant ctermfg=196
+hi Type ctermfg=7
+hi Pmenu ctermbg=0 ctermfg=15
+hi PmenuSel ctermbg=23 ctermfg=15
+hi PmenuSbar ctermbg=247
+hi Function ctermfg=250
+hi Directory ctermfg=2
+hi MoreMsg ctermfg=2
+hi Question ctermfg=2
+"hi airline_x ctermfg=81
+"hi airline_x_bold ctermfg=81
+"hi airline_c ctermfg=81
+"hi airline_c_bold ctermfg=81
+"hi airline_z ctermbg=23 ctermfg=15
+"hi airline_z_bold ctermbg=23 ctermfg=15
+"hi airline_z_red ctermbg=23 ctermfg=15
+"hi airline_a ctermbg=23 ctermfg=15
+"hi airline_a_bold ctermbg=23 ctermfg=15
+"hi airline_a_red ctermbg=23 ctermfg=15
 
+set fillchars=vert:\ 
+ 
 " Cursor line
 set cursorline
 " set cursorcolumn 
