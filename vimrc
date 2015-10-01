@@ -21,8 +21,8 @@ set t_Co=256
 let g:airline_powerline_fonts=1
 syntax enable
 
-" colorscheme hybrid
-colorscheme evening
+colorscheme hybrid
+" colorscheme evening
 " colorscheme harlequin 
 " colorscheme badwolf
 " colorscheme ingretu
@@ -91,7 +91,7 @@ hi String ctermbg=None
 "Colors
 hi LineNr ctermfg=7
 hi CursorLineNr ctermfg=15
-hi CursorLine ctermbg=4 ctermfg=None cterm=None
+hi CursorLine ctermbg=8 ctermfg=None cterm=None
 hi TabLine ctermbg=None cterm=None
 hi TabLineFill ctermbg=None cterm=None
 hi TabLineSel ctermbg=7 ctermfg=232 cterm=None
@@ -104,7 +104,7 @@ hi Pmenu ctermbg=0 ctermfg=15
 hi PmenuSel ctermbg=23 ctermfg=15
 hi PmenuSbar ctermbg=247
 hi Function ctermfg=250
-hi Directory ctermfg=2
+hi Directory ctermfg=7
 hi MoreMsg ctermfg=2
 hi Question ctermfg=2
 "hi airline_x ctermfg=81
