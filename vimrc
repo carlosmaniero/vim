@@ -31,6 +31,8 @@ colorscheme badwolf
 " Fix backspace
 set backspace=indent,eol,start
 
+"Jedi"
+let g:jedi#use_tabs_not_buffers = 1
 
 "NERDTree"
 let g:NERDTreeWinPos = "right"
@@ -100,8 +102,8 @@ hi String ctermbg=None
 "hi LineNr ctermfg=7
 "hi CursorLineNr ctermfg=15
 "hi CursorLine ctermbg=8 ctermfg=None cterm=None
-"hi TabLine ctermbg=None cterm=None
-"hi TabLineFill ctermbg=None cterm=None
+hi TabLine ctermbg=None cterm=None
+hi TabLineFill ctermbg=None cterm=None
 "hi TabLineSel ctermbg=7 ctermfg=232 cterm=None
 "hi VertSplit cterm=None ctermfg=232
 "hi String ctermfg=38
