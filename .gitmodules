@@ -76,3 +76,42 @@
 [submodule "bundle/gitv"]
 	path = bundle/gitv
 	url = https://github.com/gregsexton/gitv
+[submodule "bundle/vim-colors-lucid"]
+	path = bundle/vim-colors-lucid
+	url = https://github.com/cseelus/vim-colors-lucid
+[submodule "bundle/cyberpunk.vim"]
+	path = bundle/cyberpunk.vim
+	url = https://github.com/snowcrshd/cyberpunk.vim
+[submodule "bundle/csapprox"]
+	path = bundle/csapprox
+	url = https://github.com/godlygeek/csapprox
+[submodule "bundle/happy_hacking.vim"]
+	path = bundle/happy_hacking.vim
+	url = https://github.com/YorickPeterse/happy_hacking.vim
+[submodule "bundle/moriarty.vim"]
+	path = bundle/moriarty.vim
+	url = https://github.com/aliou/moriarty.vim
+[submodule "bundle/vim-srcery"]
+	path = bundle/vim-srcery
+	url = https://github.com/roosta/vim-srcery
+[submodule "bundle/highwayman"]
+	path = bundle/highwayman
+	url = https://github.com/bounceme/highwayman
+[submodule "bundle/vim-evokai"]
+	path = bundle/vim-evokai
+	url = https://github.com/amadeus/vim-evokai
+[submodule "bundle/sky"]
+	path = bundle/sky
+	url = https://github.com/ninja/sky
+[submodule "bundle/moonshine-vim"]
+	path = bundle/moonshine-vim
+	url = https://github.com/KKPMW/moonshine-vim
+[submodule "bundle/vim-obsidian"]
+	path = bundle/vim-obsidian
+	url = https://github.com/trevorrjohn/vim-obsidian
+[submodule "bundle/hilal"]
+	path = bundle/hilal
+	url = https://github.com/kocakosm/hilal
+[submodule "bundle/base16-vim"]
+	path = bundle/base16-vim
+	url = https://github.com/chriskempson/base16-vim

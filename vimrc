@@ -12,6 +12,8 @@ set softtabstop=4
 set expandtab
 set smartindent
 set mouse=a
+set number
+set colorcolumn=80
 
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
 " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
@@ -22,11 +24,13 @@ let g:airline_powerline_fonts=1
 syntax enable
 
 " colorscheme hybrid
-colorscheme badwolf
+" colorscheme badwolf
 " colorscheme evening
 " colorscheme harlequin 
 " colorscheme badwolf
 " colorscheme ingretu
+" colorscheme hilal
+colorscheme base16-ir-black
 
 " Fix backspace
 set backspace=indent,eol,start
@@ -86,26 +90,26 @@ autocmd BufNewFile,BufRead *.html set filetype=htmldjango
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 "Transparency colors"
-hi Normal ctermbg=NONE
-hi NonText ctermbg=NONE
-hi SpecialKey ctermbg=NONE
-hi Type ctermbg=NONE
-hi Function ctermbg=NONE
-hi Statement ctermbg=NONE
-hi Comment ctermbg=None
-hi Ignore ctermbg=None
-hi Directory ctermbg=None
-hi Question ctermbg=None
-hi MoreMsg ctermbg=None
-hi String ctermbg=None
+"hi Normal ctermbg=NONE
+"hi NonText ctermbg=NONE
+"hi SpecialKey ctermbg=NONE
+"hi Type ctermbg=NONE
+"hi Function ctermbg=NONE
+"hi Statement ctermbg=NONE
+"hi Comment ctermbg=None
+"hi Ignore ctermbg=None
+"hi Directory ctermbg=None
+"hi Question ctermbg=None
+"hi MoreMsg ctermbg=None
+"hi String ctermbg=None
 "Colors
 "hi LineNr ctermfg=7
 "hi CursorLineNr ctermfg=15
 "hi CursorLine ctermbg=8 ctermfg=None cterm=None
-hi TabLine ctermbg=None cterm=None
-hi TabLineFill ctermbg=None cterm=None
+"hi TabLine ctermbg=None cterm=None
+"hi TabLineFill ctermbg=None cterm=None
 "hi TabLineSel ctermbg=7 ctermfg=232 cterm=None
-"hi VertSplit cterm=None ctermfg=232
+"hi VertSplit cterm=None ctermfg=None
 "hi String ctermfg=38
 "hi Statement ctermfg=202
 "hi Constant ctermfg=196
@@ -127,6 +131,7 @@ hi TabLineFill ctermbg=None cterm=None
 "hi airline_a ctermbg=23 ctermfg=15
 "hi airline_a_bold ctermbg=23 ctermfg=15
 "hi airline_a_red ctermbg=23 ctermfg=15
+"hi ColorColumn ctermbg=232
 
 set fillchars=vert:\ 
  
