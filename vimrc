@@ -1,6 +1,5 @@
 execute pathogen#infect()
 
-set nonumber
 set nowrap
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -14,6 +13,7 @@ set smartindent
 set mouse=a
 set number
 set colorcolumn=80
+set modifiable
 
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
 " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
@@ -38,17 +38,71 @@ set backspace=indent,eol,start
 "Jedi"
 let g:jedi#use_tabs_not_buffers = 1
 
-"NERDTree"
-let g:NERDTreeWinPos = "right"
-map <C-t> :NERDTreeToggle<CR> :NERDTreeMirror<CR> 
-let NERDTreeIgnore = ['\.pyc$']
-
 "Git Gutter"
 let g:gitgutter_eager = 1
 let g:gitgutter_realtime = 1
 let g:gitgutter_updatetime = 250
-autocmd VimEnter * GitGutterDisable
+autocmd VimEnter * GitGutterEnable
 
+
+"NERDTree"
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let NERDTreeIgnore = ['\.pyc$']
+let g:nerdtree_tabs_open_on_console_startup=1
+let g:NERDTreeMinimalUI = 1
+
+"On startup focus on buffer
+function! s:FocusOnBuffer()
+  if winnr("$") != 2
+    return
+  endif
+  if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
+        \ || &buftype == 'quickfix'
+    wincmd l
+  endif
+endfunction
+
+augroup FocusOnBuffer
+  au!
+  autocmd VimEnter * NERDTreeMirrorOpen
+  autocmd VimEnter * call s:FocusOnBuffer()
+augroup END
+
+"Clone NerdTree if no more windows opened
+function! s:CloseIfOnlyControlWinLeft()
+  if winnr("$") != 1
+    return
+  endif
+  if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
+        \ || &buftype == 'quickfix'
+    q
+  endif
+endfunction
+augroup CloseIfOnlyControlWinLeft
+  au!
+  au BufEnter * call s:CloseIfOnlyControlWinLeft()
+augroup END
+
+
+function s:CustomizeColors()
+    hi TabLineSel ctermbg=7 ctermfg=0
+    hi ColorColumn ctermbg=233
+    "Transparency colors"
+    hi Normal ctermbg=NONE
+    hi NonText ctermbg=NONE
+    hi SpecialKey ctermbg=NONE
+    hi Type ctermbg=NONE
+    hi Function ctermbg=NONE
+    hi Statement ctermbg=NONE
+    hi Comment ctermbg=None
+    hi Ignore ctermbg=None
+    hi Directory ctermbg=None
+    hi Question ctermbg=None
+    hi MoreMsg ctermbg=None
+    hi String ctermbg=None
+endfunction
+
+autocmd VimEnter * call s:CustomizeColors()
 "Python Syntax"
 autocmd FileType python
     \ let python_highlight_all = 1 |
@@ -73,6 +127,9 @@ map <C-Up> <ESC>:tabprevious<CR> :NERDTreeMirror<CR>
 
 map! <C-a> <ESC>:GitGutterToggle<CR>:set invnumber<CR>i
 map <C-a> <ESC>:GitGutterToggle<CR>:set invnumber<CR>
+
+map! <C-t> <ESC>:NERDTreeTabsToggle<CR>i
+map <C-t> <ESC>:NERDTreeTabsToggle<CR><CR>
 
 "Git commands"
 map <F2> :Gstatus<CR>
@@ -131,14 +188,13 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 "hi airline_a ctermbg=23 ctermfg=15
 "hi airline_a_bold ctermbg=23 ctermfg=15
 "hi airline_a_red ctermbg=23 ctermfg=15
-"hi ColorColumn ctermbg=232
+" hi ColorColumn ctermbg=22 guibg=#000000
 
-set fillchars=vert:\ 
+"set fillchars=vert:\ 
  
 " Cursor line
 set cursorline
 " set cursorcolumn 
-
 
 "Auto close doc
 " autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
