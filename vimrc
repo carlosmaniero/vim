@@ -13,6 +13,7 @@ set smartindent
 set mouse=a
 set number
 set colorcolumn=80
+set hlsearch
 set modifiable
 
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
@@ -21,6 +22,12 @@ set modifiable
 set guifont=Meslo\ LG\ S\ for\ Powerline
 set t_Co=256
 let g:airline_powerline_fonts=1
+let g:airline_left_alt_sep=""
+let g:airline_left_sep=""
+let g:airline_right_alt_sep=""
+let g:airline_right_sep=""
+
+autocmd VimEnter * NERDTreeMirrorOpen
 syntax enable
 
 " colorscheme hybrid
@@ -30,7 +37,8 @@ syntax enable
 " colorscheme badwolf
 " colorscheme ingretu
 " colorscheme hilal
-colorscheme base16-ir-black
+" colorscheme base16-ir-black
+colorscheme base16-summerfruit-dark 
 
 " Fix backspace
 set backspace=indent,eol,start
@@ -50,6 +58,7 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let NERDTreeIgnore = ['\.pyc$']
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:NERDTreeMinimalUI = 1
+let g:NERDTreeWinSize=25
 
 "On startup focus on buffer
 function! s:FocusOnBuffer()
@@ -83,26 +92,39 @@ augroup CloseIfOnlyControlWinLeft
   au BufEnter * call s:CloseIfOnlyControlWinLeft()
 augroup END
 
+map <C-o> :NERDTreeFocusToggle<cr>
+
+"TagBar"
+map <F8> :TagbarToggle<CR><CR>
+autocmd VimEnter * TagbarOpen
+let g:tagbar_width=25
+let g:tagbar_compact=1
+let g:tagbar_iconchars=['▸', '▾']
 
 function s:CustomizeColors()
-    hi TabLineSel ctermbg=7 ctermfg=0
-    hi ColorColumn ctermbg=233
+    "hi TabLineSel ctermbg=7 ctermfg=0
+    "hi ColorColumn ctermbg=233
+
+    " TagBar color
+    hi TagbarFoldIcon term=bold ctermfg=68 guifg=#3777E6
+    hi TagbarKind term=bold ctermfg=68 guifg=#3777E6
     "Transparency colors"
-    hi Normal ctermbg=NONE
-    hi NonText ctermbg=NONE
-    hi SpecialKey ctermbg=NONE
-    hi Type ctermbg=NONE
-    hi Function ctermbg=NONE
-    hi Statement ctermbg=NONE
-    hi Comment ctermbg=None
-    hi Ignore ctermbg=None
-    hi Directory ctermbg=None
-    hi Question ctermbg=None
-    hi MoreMsg ctermbg=None
-    hi String ctermbg=None
+    "hi Normal ctermbg=NONE
+    "hi NonText ctermbg=NONE
+    "hi SpecialKey ctermbg=NONE
+    "hi Type ctermbg=NONE
+    "hi Function ctermbg=NONE
+    "hi Statement ctermbg=NONE
+    "hi Comment ctermbg=None
+    "hi Ignore ctermbg=None
+    "hi Directory ctermbg=None
+    "hi Question ctermbg=None
+    "hi MoreMsg ctermbg=None
+    "hi String ctermbg=None
 endfunction
 
 autocmd VimEnter * call s:CustomizeColors()
+
 "Python Syntax"
 autocmd FileType python
     \ let python_highlight_all = 1 |
@@ -115,9 +137,6 @@ let g:flake8_max_line_length=119
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-"TagBar"
-map <F8> :TagbarToggle<CR><CR>
 
 "Alternate tab"
 map! <C-Down> <ESC>:tabnext<CR> :NERDTreeMirror<CR>i
@@ -139,6 +158,10 @@ map <F5> :Gpull<CR>
 map <F6> :Gcommit<CR>i
 map <F7> :Gpush<CR>
 
+"Search"
+" nnoremap <esc> :let @/ = ""<cr>
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
 
 "HTML"
 autocmd BufNewFile,BufRead *.html set filetype=htmldjango
@@ -200,3 +223,5 @@ set cursorline
 " autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 " #autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 "
+
+let g:ycm_autoclose_preview_window_after_completion=1
