@@ -15,6 +15,7 @@ set number
 set colorcolumn=80
 set hlsearch
 set modifiable
+set cursorline
 
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
 " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
@@ -216,7 +217,6 @@ autocmd BufNewFile,BufRead *.md set filetype=markdown
 "set fillchars=vert:\ 
  
 " Cursor line
-set cursorline
 " set cursorcolumn 
 
 "Auto close doc
@@ -225,3 +225,12 @@ set cursorline
 "
 
 let g:ycm_autoclose_preview_window_after_completion=1
+"setlocal foldmethod=indent
+nnoremap <space> za
+vnoremap <space> zf
+let g:ifold_mode=1
+
+map <leader>d :YcmCompleter GoToDefinition<cr>
+map! <leader>d :YcmCompleter GoToDefinition<cr>
+
+" autocmd BufNewFile,BufRead * normal zR

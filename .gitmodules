@@ -124,3 +124,6 @@
 [submodule "bundle/vim-airline-themes"]
 	path = bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "bundle/python_ifold"]
+	path = bundle/python_ifold
+	url = https://github.com/vim-scripts/python_ifold
