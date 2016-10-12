@@ -38,8 +38,14 @@ syntax enable
 " colorscheme badwolf
 " colorscheme ingretu
 " colorscheme hilal
-" colorscheme base16-ir-black
-colorscheme base16-summerfruit-dark 
+"colorscheme base16-atelier-cave
+"colorscheme base16-atelier-lakeside
+"colorscheme base16-bright
+"colorscheme base16-default-dark
+"colorscheme base16-ir-black
+colorscheme base16-pop
+"colorscheme base16-spacemacs
+"colorscheme base16-summerfruit-dark 
 
 " Fix backspace
 set backspace=indent,eol,start
@@ -231,3 +237,33 @@ map <leader>d :YcmCompleter GoToDefinition<cr>
 map! <leader>d :YcmCompleter GoToDefinition<cr>
 
 " autocmd BufNewFile,BufRead * normal zR
+
+let g:ycm_python_binary_path = 'python'
+
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
