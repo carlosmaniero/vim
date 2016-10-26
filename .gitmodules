@@ -145,3 +145,15 @@
 [submodule "requirements/gotags"]
 	path = requirements/gotags
 	url = git://github.com/jimweirich/gotags.git
+[submodule "bundle/tern_for_vim"]
+	path = bundle/tern_for_vim
+	url = https://github.com/ternjs/tern_for_vim
+[submodule "bundle/vim-hybrid-material"]
+	path = bundle/vim-hybrid-material
+	url = https://github.com/kristijanhusak/vim-hybrid-material
+[submodule "bundle/vim-quantum"]
+	path = bundle/vim-quantum
+	url = https://github.com/tyrannicaltoucan/vim-quantum
+[submodule "bundle/vim-fahrenheit"]
+	path = bundle/vim-fahrenheit
+	url = https://github.com/fcpg/vim-fahrenheit
