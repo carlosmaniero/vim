@@ -5,17 +5,19 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set smartindent
 set mouse=a
 set number
 set colorcolumn=80
+set columns=109
+set lines=30
 set hlsearch
 set modifiable
-set termguicolors
+" set termguicolors
 
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
 " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
@@ -51,6 +53,7 @@ colorscheme base16-atelier-lakeside
 "colorscheme moonshine
 "autocmd VimEnter * AirlineTheme tomorrow
 "colorscheme base16-atelier-lakeside
+"colorscheme srcery
 
 " Fix backspace
 set backspace=indent,eol,start
@@ -123,11 +126,26 @@ let g:tagbar_iconchars=['▸', '▾']
 function s:CustomizeColors()
     "hi TabLineSel ctermbg=7 ctermfg=0
     hi ColorColumn ctermbg=232
+    "Transparency colors"
+    hi Normal ctermbg=NONE guibg=NONE
+    hi NonText ctermbg=NONE guibg=NONE
+    hi SpecialKey ctermbg=NONE guibg=NONE
+    hi Type ctermbg=NONE guibg=NONE
+    hi Function ctermbg=NONE guibg=NONE
+    hi Statement ctermbg=NONE guibg=NONE
+    hi Comment ctermbg=None guibg=NONE
+    hi Ignore ctermbg=None guibg=NONE
+    hi Directory ctermbg=None guibg=NONE
+    hi Question ctermbg=None guibg=NONE
+    hi MoreMsg ctermbg=None guibg=NONE
+    hi String ctermbg=None guibg=NONE
+    hi VertSplit ctermbg=none guibg=NONE
+    set termguicolors
 
     " TagBar color
     hi TagbarFoldIcon term=bold ctermfg=68 guifg=#3777E6
     hi TagbarKind term=bold ctermfg=68 guifg=#3777E6
-    hi VertSplit ctermbg=none guibg=#161b1d
+    "hi VertSplit ctermbg=none guibg=#161b1d
     hi Visual ctermbg=255
     hi CursorLine ctermbg=235
     hi CursorLineNr ctermbg=236 ctermfg=161
@@ -155,6 +173,10 @@ autocmd FileType python
     \ let python_highlight_all = 1 |
     \ :Python2Syntax
 
+autocmd FileType python
+    \ set tabstop=2 |
+    \ set shiftwidth=2 |
+    \ set softtabstop=2
 "Flake8"
 let g:flake8_max_line_length=119
 
